@@ -1,0 +1,46 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>My Post</title>-->
+<!--</head>-->
+<!--<body>-->
+
+{% extends "Ucook/1base.html" %}
+{% block content %}
+
+    <h5>My Post</h5><br>
+
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-mypost-posted-tab" data-toggle="tab" href="#nav-mypost-posted" role="tab" aria-controls="nav-home" aria-selected="true">Posted</a>
+    <a class="nav-item nav-link" id="nav-mypost-matched-tab" data-toggle="tab" href="#nav-mypost-matched" role="tab" aria-controls="nav-profile" aria-selected="false">Matched</a>
+    <a class="nav-item nav-link" id="nav-mypost-contact-tab" data-toggle="tab" href="#nav-mypost-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Completed</a>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-mypost-posted" role="tabpanel" aria-labelledby="nav-mypost-posted-tab"><br>Posted Content</div>
+  <div class="tab-pane fade" id="nav-mypost-matched" role="tabpanel" aria-labelledby="nav-mypost-matched-tab"><br>Matched Content</div>
+  <div class="tab-pane fade" id="nav-mypost-contact" role="tabpanel" aria-labelledby="nav-mypost-contact-tab"><br>Completed Content</div>
+</div>
+
+
+{#<div class="mypost-posted">#}
+{#    <label>Posted</label>#}
+{#    <p></p>#}
+{#</div>#}
+{##}
+{#<div class="mypost-matched">#}
+{#    <label>Matched</label>#}
+{#    <p></p>#}
+{#</div>#}
+{##}
+{#<div class="mypost-completed">#}
+{#    <label>Completed</label>#}
+{#    <p></p>#}
+{#</div>#}
+
+{% endblock %}
+
+<!--</body>-->
+<!--</html>-->

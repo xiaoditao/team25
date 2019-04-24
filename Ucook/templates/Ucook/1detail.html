@@ -1,0 +1,46 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Post Detail</title>-->
+<!--</head>-->
+<!--<body>-->
+
+{% extends "Ucook/1base.html" %}
+
+{% block head %}
+    <style type="text/css">
+        label {
+            width: 100px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+<div class="google">
+    <p>Google Map API</p>
+    <img id="profile-image" src="../../static/images/map.png" width="100" height="100"><br><br>
+</div>
+
+<div class="detail">
+    <label>Username: </label>
+    <input id="detail-username" type="text"><br>
+    <label>Time: </label>
+    <input id="detail-time" type="text"><br>
+    <label>Location: </label>
+    <input id="detail-location" type="text"><br>
+    <label>Provide: </label>
+    <input id="detail-provide" type="text"><br>
+    <label>Need: </label>
+    <input id="detail-need" type="text"><br>
+    <label>Text: </label>
+    <input id="detail-text" type="text"><br>
+
+    <br><button id="detail-request">Send Request</button>
+</div>
+
+{% endblock %}
+
+<!--</body>-->
+<!--</html>-->

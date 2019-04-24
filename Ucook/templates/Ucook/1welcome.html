@@ -1,0 +1,83 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--<meta charset="UTF-8">-->
+<!--<title>Welcome</title>-->
+<!--</head>-->
+<!--<body>-->
+
+{% extends "Ucook/1base.html" %}
+
+{% block head %}
+    <style type="text/css">
+    </style>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="welcome-video">
+        <p>Welcome to UCook!</p>
+
+        <iframe width="300" height="200"
+                src="https://www.youtube.com/embed/1fYpXPFCmOE?autoplay=1">
+        </iframe>
+
+        <br><br>
+
+        <a href="introduction.html">
+            <button>Introduction</button>
+        </a>
+
+        <br>
+
+        <ul class="navbar-nav mr-auto">
+            <br>
+            <li class="nav-item dropdown">
+                <a role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="base-explore">Explore</button>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{% url 'exploreHost' %}" id="base-findHost">Find Host</a>
+                    <a class="dropdown-item" href="{% url 'exploreNonHost' %}" id="base-findNonHost">Find Non-host </a>
+                </div>
+            </li>
+            <br>
+
+            {#        <span class="explore-dropdown">#}
+            {#            <button id="base-explore">Explore</button>#}
+            {#            <nav class="explore-dropdown-content">#}
+            {#                <a href="{% url 'exploreHost' %}" id="base-findHost">Find Host</a>#}
+            {#                <a href="{% url 'exploreNonHost' %}" id="base-findNonHost">Find Non-host </a>#}
+            {#            </nav>#}
+            {#        </span>#}
+
+            <li class="nav-item dropdown">
+                <a role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="base-post">Post</button>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{% url 'iAmHost' %}" id="base-iAmHost">I Am Host</a>
+                    <a class="dropdown-item" href="{% url 'iAmNonHost' %}" id="base-iAmNonHost">I Am Non-host</a>
+                </div>
+            </li>
+            <br>
+        </ul>
+
+        {#        <span class="post-dropdown">#}
+        {#            <button id="base-post">Post</button>#}
+        {#            <nav class="post-dropdown-content">#}
+        {#                <a href="{% url 'iAmHost' %}" id="base-iAmHost">I Am Host</a>#}
+        {#                <a href="{% url 'iAmNonHost' %}" id="base-iAmNonHost">I Am Non-host </a>#}
+        {#            </nav>#}
+        {#        </span>#}
+
+        <a href="question.html">
+            <button>Recently Asked Questions</button>
+        </a>
+    </div>
+
+{% endblock %}
+
+<!--</body>-->
+<!--</html>-->

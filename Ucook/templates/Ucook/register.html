@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../static/js/jquery.tubular.1.0.js"></script>
+    <style type="text/css">
+        .register {
+            margin-left: 30px;
+            font-size: 20px;
+            color: #243A4D;
+        }
+        #register-nameOfSite {
+            font-size: 30px;
+          }
+        label {
+            cursor: pointer;
+            display: inline-block;
+            padding: 3px 6px;
+            text-align: right;
+            width: 80px;
+            vertical-align: top;
+        }
+    </style>
+    <title>Welcome</title>
+</head>
+<body background="../../static/images/5.jpg" style="opacity: 1">
+<div id="wrapper">
+<div style="text-align:center; padding-top: 10px">
+{#<img id="register-logo" src="../../static/images/ucook.png" alt="logo" width="260" height="260"><br>#}
+
+<div class="register">
+<p id="login-nameOfSite" style="color: white; font-size: 70px; font-weight: bold">UCook</p>
+
+{#<span id="register-nameOfSite" style="color: white">UCook</span>#}
+{#<br><br>#}
+
+{#    <form method="post" action="{% url 'register' %}">#}
+{#        username: <input type="text" name="username" /><br>#}
+{#        password: <input type="text" name="password" /><br>#}
+{#        retype password: <input type="text" name="retypePassword" /><br>#}
+{#        email: <input type="text" name="email" /><br>#}
+{#        <input type="submit" value="Register" />#}
+{#            {% csrf_token %}#}
+{#    </form>#}
+
+<form method="post" action="{% url 'register' %}">
+    <table style="margin: 0 auto; color: white">
+        {% for field in form.visible_fields %}
+            <tr>
+                <td>{{ field.label_tag }}</td>
+                <td>{{ field }}</td>
+                <td class="errorlist">
+                    {% for error in field.errors %} {{ error }} {% endfor %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% csrf_token %}
+<br>
+    <button type="submit" id="register_button">Register</button>
+</form>
+
+<br>
+
+<a id="register-login" href="{% url 'login' %}" style="color: white">
+{#    <button id="register-login">Login</button>#}
+    Login Here
+</a><br>
+
+{% for error in form.non_field_errors %}
+    <p class="errorlist">
+        {{ error }}
+    </p>
+{% endfor %}
+</div>
+</div>
+</div>
+</body>
+</html>
+
+{#<script>#}
+{#    $('document').ready(function() {#}
+{#        const options = {videoId: 'ab0TSkLe-E0', start: 3};#}
+{#        // $('#wrapper').tubular(options);#}
+{#        // f-UGhWj1xww cool sepia hd#}
+{#        $('#wrapper').tubular({videoId: 'SYP6n1eguIY'});#}
+{#    });#}
+{#</script>#}

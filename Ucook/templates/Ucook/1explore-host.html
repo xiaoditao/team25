@@ -1,0 +1,66 @@
+{% extends "Ucook/1base.html" %}
+
+{% block head %}
+    <style type="text/css">
+        label {
+            width: 100px;
+        }
+        .checkbox {
+            margin: 5px;
+        }
+    .explorehost-post {
+        margin: 5px;
+        height: 60px;
+        width: 300px;
+    }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <input type="text" id="explorehost-search" name="search-host"/>
+    <a href="{% url 'exploreHost' %}">
+        <button id="explorehost-search">Search</button>
+    </a><br>
+
+    <br>
+
+    <div class="explorehost-dish">
+        <p>Dish Type</p>
+        <input id="explorehost-chinese" type="checkbox" class="checkbox">Chinese
+        <input id="explorehost-korean" type="checkbox" class="checkbox">Korean
+        <input id="explorehost-american" type="checkbox" class="checkbox">American
+        <input id="explorehost-italian" type="checkbox" class="checkbox">Italian
+        <input id="explorehost-indian" type="checkbox" class="checkbox">Indian
+        <input id="explorehost-japanese" type="checkbox" class="checkbox">Japanese
+        <input id="explorehost-mexican" type="checkbox" class="checkbox">Mexican
+        <input id="explorehost-thai" type="checkbox" class="checkbox">Thai
+        <input id="explorehost-vegetarian" type="checkbox" class="checkbox">Vegetarian
+    </div>
+
+    <br>
+    <div class="explorehost-provide">
+        <p>They need me</p>
+        <input id="explorehost-wash" type="checkbox" class="checkbox">Wash Bowl
+        <input id="explorehost-ingredients" type="checkbox" class="checkbox">Bring Ingredients
+        <input id="explorehost-prepare" type="checkbox" class="checkbox">Prepare Food
+        <input id="explorehost-cook" type="checkbox" class="checkbox">Do Cooking
+
+    </div>
+
+    <br>
+
+    <input class="explorehost-post" type="text" id="explorehost-reasult1"/>
+    <a href="{% url 'detail' %}">
+        <button id="explorehost-detail1">Detail</button>
+    </a><br>
+    <input class="explorehost-post" type="text" id="explorehost-reasult2"/>
+    <a href="{% url 'detail' %}">
+        <button id="explorehost-detail2">Detail</button>
+    </a><br>
+    <input class="explorehost-post" type="text" id="explorehost-reasult3"/>
+    <a href="{% url 'detail' %}">
+        <button id="explorehost-detail3">Detail</button>
+    </a><br>
+
+{% endblock %}

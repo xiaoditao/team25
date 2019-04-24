@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../../static/js/jquery.tubular.1.0.js"></script>
+    <style type="text/css">
+        .login {
+            margin-left: 30px;
+            font-size: 20px;
+            color: black;
+            {#color: #243A4D;#}
+        }
+        #login-nameOfSite {
+            font-size: 30px;
+          }
+        label {
+            cursor: pointer;
+            display: inline-block;
+            padding: 3px 6px;
+            text-align: left;
+            width: 100px;
+            vertical-align: top;
+        }
+    </style>
+    <title>Welcome</title>
+</head>
+<body background="../../static/images/5.jpg" style="opacity: 1">
+<div id="wrapper">
+{#    <img id="register-logo" src="../../static/images/ucook.png" alt="logo" width="300" height="260"><br>#}
+
+    <div style="text-align:center; padding-top: 10px">
+{#    <div style="text-align:center; padding-top: 20px">#}
+
+    {#{% block content %}#}
+    <div class="login">
+
+    <p id="login-nameOfSite" style="color: white; font-size: 70px; font-weight: bold">UCook</p>
+
+    <form method="post" action="{% url 'login' %}">
+        <table style="margin: 0 auto; color: white">
+            {% for field in form.visible_fields %}
+                <tr>
+                    <td>{{ field.label_tag }}</td>
+                    <td>{{ field }}</td>
+                    <td class="errorlist">
+                        {% for error in field.errors %} {{ error }} {% endfor %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% csrf_token %}
+    <br>
+        <button type="submit" id="login_button">Login</button>
+    </form>
+
+    <br>
+    <a id="login-register" href="{% url 'register' %}" style="color: white">
+        Register Here
+    {#    <button id="login-register">Register Here</button>#}
+    </a>
+
+    <br>
+    <p style="color: white">Other way to login:
+        <a href="{% url 'social:begin' 'google-oauth2' %}" id="login-gmailLogin" style="color: white">Gmail Login</a>
+    </p>
+    <a href="{% url 'reset_password' %}" style="color: white">Forget Password?</a>
+    {% for error in form.non_field_errors %}
+        <p class="errorlist">
+            {{ error }}
+        </p>
+    {% endfor %}
+
+    </div>
+{#{% endblock %}#}
+    </div>
+</div>
+</body>
+</html>
+
+{#<script>#}
+{#    $('document').ready(function() {#}
+{#        const options = {videoId: 'ab0TSkLe-E0', start: 3};#}
+{#        // $('#wrapper').tubular(options);#}
+{#        // f-UGhWj1xww cool sepia hd#}
+{#        $('#wrapper').tubular({videoId: 'K24f3yoZPqc'});#}
+{#    });#}
+{#</script>#}

@@ -1,0 +1,28 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Personal Profile</title>-->
+<!--</head>-->
+<!--<body>-->
+
+{% extends "Ucook/1base.html" %}
+{% block content %}
+
+
+<div class="profile">
+    <img id="profile-image" src="../../static/images/icon.svg" width="100" height="100"><br><br>
+    <label id="profile-username">Username: {{TestName}}</label><br>
+    <label id="profile-email">Email: {{TestEmail}}</label><br>
+    <label id="profile-introduction">Introduction: {{TestIntroduction}}</label><br>
+    <label id="profile-rating">Rating: {{TestRating}}</label><br>
+</div>
+
+<br>
+
+<a href="{% url 'mypost' %}"><button>My Post</button></a>
+
+{% endblock %}
+
+<!--</body>-->
+<!--</html>-->

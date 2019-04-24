@@ -1,0 +1,21 @@
+#id_search_form {
+    margin: auto;
+    width: 270px;
+    padding-bottom: 20px;
+}
+
+#id_search_form input[type="text"] {
+    width: 200px;
+}
+
+#map {
+    margin: auto;
+    height: 450px;
+    width: 80%;
+}
+
+@media (max-width: 639px) {
+    #map {
+        width: 100%;
+    }
+}
